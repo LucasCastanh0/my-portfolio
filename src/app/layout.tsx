@@ -1,21 +1,24 @@
-import './globals.scss'
-import { Inter } from 'next/font/google'
+import "./globals.scss";
+import { Poppins } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Poppins({
+    subsets: ["latin"],
+    weight: ["400", "500", "600"],
+});
 
 export const metadata = {
-  title: 'Lucas Phelipe Castanho Ribeiro',
-  description: 'Lucas Ribeiro is a software engineer...',
-}
+    title: "Lucas Phelipe Castanho Ribeiro",
+    description: "Lucas Ribeiro is a software engineer...",
+};
 
 export default function RootLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode
+    children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
-  )
+    return (
+        <html lang="en">
+            <body className={inter.className}>{children}</body>
+        </html>
+    );
 }
